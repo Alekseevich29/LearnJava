@@ -1,6 +1,4 @@
-package HomeWork1;
-
-import org.w3c.dom.ls.LSOutput;
+package home_work_1;
 
 import java.util.Scanner;
 
