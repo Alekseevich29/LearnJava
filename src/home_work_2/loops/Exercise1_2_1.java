@@ -8,7 +8,6 @@ public class Exercise1_2_1 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите целое число для умножения");
         String entNumber = console.next();
-        //  String resualt = Integer.toString(entNumber);
         int resualtC =1;
 
         String resultOfNumber = "";
