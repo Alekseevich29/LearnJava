@@ -1,7 +1,7 @@
 package home_work_2.loops;
 
 import java.util.Scanner;
-//Дописать проверку для переполнения!!!!
+//Не знаю как написать проверку с переполнением
 public class Exercise1_1_1 {
     public static void main(String[] agr) {
         Scanner console = new Scanner(System.in);
@@ -12,14 +12,20 @@ public class Exercise1_1_1 {
         }
         int resault=1;
         for(int i = 1; i <= a; i++) {
-            resault = resault * i;
-            if (i!=a){
-                System.out.print(i + " * ");
-            }else System.out.print(i);
-            if (i==a){
-                System.out.print(" = "+resault);
-            }
+             if (i!=a) {
+                 resault = resault * i;
+                 System.out.print(i + " * ");
+             }
+             if (i==a){
+                 if (resault == 0 || resault < 0){
+                     System.out.println("\n Тип переполнен!!");
+                     break;
+                 }
+                    System.out.print(" = "+resault);
+             }
         }
+
+
 
     }
 }

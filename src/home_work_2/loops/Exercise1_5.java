@@ -8,11 +8,6 @@ public class Exercise1_5 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите Минимум");
         String entNumber = console.next();
-        String result = "";
-            for (int i = 0; i < entNumber.length(); i++) {
-                result= entNumber.charAt(i) + result;
-            }
-            System.out.println("Числа наоборот " + result);
 
         }
     // Задача 1.5.1

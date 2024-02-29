@@ -1,24 +1,20 @@
 package home_work_2.loops;
 import java.util.Scanner;
-/*Сложно было понять как удалить лишний символ *
-Интересная задача. заставила помучиться.
-*/
+//Не уверен что тут стоит использовать try catch. Через регулярные выражения не получилось.
 public class Exercise1_2_1 {
     public static void main(String[] agr) {
         Scanner console = new Scanner(System.in);
-        System.out.println("Введите целое число для умножения");
-        String entNumber = console.next();
+        System.out.println("Введите целое число положительное для умножения");
+        String entNumber="";
         int resualtC =1;
-
         String resultOfNumber = "";
-        for (int i = 0; i < entNumber.length(); i++) {
-            if(entNumber.charAt(i)=='.'){           //Проверка на целое число.
+        try {
+            entNumber= console.next();
+            for (int i = 0; i < entNumber.length(); i++) {
+            if(entNumber.charAt(i)=='.'){           //Проверка на целое число. Если в строке находиться точка то число не целое.
                 System.out.println("Вы ввели не целое число !!!");
             }
-           /* if (entNumber.charAt(i)=='п'){
-                System.out.println("Введено не число !!!");
-                System.exit(0);
-            }*/ //Проверка на строку. Не знаю как проверить на введенное слово а не строку.
+
             if (i!=entNumber.length()-1){ //
                 resultOfNumber = resultOfNumber + entNumber.charAt(i) + " * ";
                 int numberOfInt = Integer.parseInt("" + entNumber.charAt(i));
@@ -30,5 +26,9 @@ public class Exercise1_2_1 {
             }
         }
         System.out.println(resultOfNumber+" = "+resualtC);
+        }
+        catch (NumberFormatException e){
+            System.out.println("Ввели строку а не число");
+        }
     }
 }
