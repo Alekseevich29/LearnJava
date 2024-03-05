@@ -1,5 +1,6 @@
 package home_work_2.loops;
 
+import java.util.Arrays;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -8,7 +9,7 @@ public class Exercise1_5 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите Минимум");
         String entNumber = console.next();
-           // System.out.println(RandomNumberPersent());
+          System.out.println(reversOfNumbers(entNumber));
 
 
         }
@@ -73,17 +74,17 @@ public class Exercise1_5 {
     //Задача 1.5.5
     public static void numbersSteps (int entNumberMin,int entNumberMax,int entNumberStep){
         for (int i = entNumberMin; i <= entNumberMax ; i++) {
-            if (i%entNumberStep==0){
-                System.out.print(i+" ");
+            if (i % entNumberStep == 0) {
+                System.out.print(i + " ");
             }
         }
     }
     //Задача 1.5.6
-    public static void reversOfNumbers (String entNumber){
+    public static int reversOfNumbers (String entNumber){
             String result = "";
         for (int i = 0; i < entNumber.length(); i++) {
             result= entNumber.charAt(i) + result;
         }
-        System.out.println("Числа наоборот " + result);
+        return Integer.parseInt(result);
     }
 }
