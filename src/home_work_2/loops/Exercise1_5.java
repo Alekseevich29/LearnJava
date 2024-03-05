@@ -8,25 +8,25 @@ public class Exercise1_5 {
         Scanner console = new Scanner(System.in);
         System.out.println("Введите Минимум");
         String entNumber = console.next();
+           // System.out.println(RandomNumberPersent());
+
 
         }
     // Задача 1.5.1
-    public static void LargestNumber (String numberNatural){
-        int max = 0;
+    public static int largestNumber (String numberNatural){
+      int max = 0;
         for (int i = 0; i < numberNatural.length(); i++) {
             int maxOfAll = Integer.parseInt(numberNatural.charAt(i)+"");
             if (max>maxOfAll){
-                max=max;
-            }
-            if (max<maxOfAll){
+                return max;
+            }else if (max<maxOfAll){
                 max=maxOfAll;
             }
         }
-        System.out.println("Найбольшая цифра = " +max);
-
-    }
+        return max;
+     }
     // Задача 1.5.2
-    public static void RandomNumberPersent (){
+    public static int randomNumberPersent (){
         final Random random = new Random();
         int randomNumber = 0;
         int counter = 0;
@@ -36,11 +36,10 @@ public class Exercise1_5 {
                 counter++;
             }
         }
-        System.out.println("Количество случайных четных чисел = "+counter+
-                "\nА процент составляет "+((counter*100)/1000)+"%");
+        return counter;
     }
     //Задача 1.5.3
-    public static void EvenAndOdd (String numberReader){
+    public static void evenAndOdd (String numberReader){
         int counterOne = 0;
         int counterTwo = 0;
         String numberOne = "";
@@ -52,7 +51,6 @@ public class Exercise1_5 {
             }else {counterTwo++;
                 numberTwo=numberTwo + numberReader.charAt(i)+" ";
             }
-
         }
         System.out.println("Четные числа = " + numberOne+
                 "\nЧетных чисел = "+ counterOne +
@@ -60,7 +58,7 @@ public class Exercise1_5 {
                 "\nНечетных чисел = "+ counterTwo);
     }
     //Задача 1.5.4
-    public static void FibonachiNumbers (int numberNeed){
+    public static void eibonachiNumbers (int numberNeed){
         int number1 = 1;
         int number2 = 1;
         int number3;
@@ -72,8 +70,8 @@ public class Exercise1_5 {
             number2 = number3;
         }
     }
-    //Задача 1.5.5   Вопрос не совсем ясно задание.
-    public static void NumbersSteps (int entNumberMin,int entNumberMax,int entNumberStep){
+    //Задача 1.5.5  
+    public static void numbersSteps (int entNumberMin,int entNumberMax,int entNumberStep){
         for (int i = entNumberMin; i <= entNumberMax ; i++) {
             if (i%entNumberStep==0){
                 System.out.print(i+" ");
@@ -81,7 +79,7 @@ public class Exercise1_5 {
         }
     }
     //Задача 1.5.6
-    public static void ReversOfNumbers (String entNumber){
+    public static void reversOfNumbers (String entNumber){
             String result = "";
         for (int i = 0; i < entNumber.length(); i++) {
             result= entNumber.charAt(i) + result;

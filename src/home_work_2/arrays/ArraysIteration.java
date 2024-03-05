@@ -46,6 +46,7 @@ public class ArraysIteration {
                 a ++;
                 if (a%2==0) {
                     System.out.print(i+ " ");
+
                 }
             }
         }
