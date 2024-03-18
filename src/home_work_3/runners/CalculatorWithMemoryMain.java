@@ -14,6 +14,7 @@ public class CalculatorWithMemoryMain {
         calcMemory.plus(4.1, calcMemory.load());
         calcMemory.save();
         calcMemory.plus(calcMemory.load(), calcMemory.multiply(15, 7));
+        calcMemory.save();
         System.out.printf("%.2f%n", calcMemory.load()); // 140.46
     }
 }

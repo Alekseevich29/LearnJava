@@ -56,9 +56,9 @@ public class CalculatorWithMemory {
     }
 
     public double load(){
-        double returnValue = resualtSave;
+       double returnValue = resualtSave;
         resualtSave=0.0;
-        return resualt;
+        return returnValue;
     }
     private int countOperation;
 }
