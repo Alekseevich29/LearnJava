@@ -2,19 +2,15 @@ package home_work_1;
 
 import java.util.Scanner;
 
-public class Exercise6_3 {
-    public static void main(String[] agr){
-        Scanner console = new Scanner(System.in);
-        System.out.println("Р’РІРµРґРёС‚Рµ РІР°С€Рµ РёРјСЏ!");
-        String name = console.nextLine();
+public class Exercise6_3 implements ICommunicationPrinter{
+
+    public  String welcom (String name){
         switch (name){
-            case "Р’Р°СЃСЏ":
-                System.out.printf("РџСЂРёРІРµС‚ \nРЇ С‚РµР±СЏ С‚Р°Рє РґРѕР»РіРѕ Р¶РґР°Р»");
-                break;
-            case "РђРЅР°СЃС‚Р°СЃРёСЏ":
-                System.out.printf("РЇ С‚РµР±СЏ С‚Р°Рє РґРѕР»РіРѕ Р¶РґР°Р»");
-                break;
-            default:System.out.println("Р”РѕР±СЂС‹Р№ РґРµРЅСЊ, Р° РІС‹ РєС‚Рѕ?");
+            case "Вася":
+                return "Привет Я тебя так долго ждал";
+            case "Анастасия":
+                return "Я тебя так долго ждал";
+            default:return "Добрый день, а вы кто?";
         }
     }
 }

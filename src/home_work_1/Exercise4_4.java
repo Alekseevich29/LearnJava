@@ -9,11 +9,18 @@ public class Exercise4_4 {
         double a = console.nextDouble();  // предполагаю что пользователь вводит число Битов.
         System.out.println("Переводить в байты? 1-да, 2-нет.");
         int vibor = console.nextInt();
+        resultByte(a,vibor);
+
+    }
+
+    public static double resultByte (double number, int vibor){
+        double result = 0;
         if (vibor==1){
-            double result = a / 8 ;
-            System.out.println("Ваше число в байтах = "+result);
+            result = number / 8 ;
+            return result;
         }else {
-            double result = a / 8000;
-            System.out.println("Ваше число в килобайтах = "+result);}
+            result = number / 8000;
+            return  result;
+        }
     }
 }

@@ -5,18 +5,29 @@ import java.util.Scanner;
 public class Exercise4_1 {
     public static void main(String[] agr) {
         Scanner console = new Scanner(System.in);
-        System.out.println("Р’РІРµРґРёС‚Рµ РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ");
+        System.out.println("Введите первое число");
         int a = console.nextInt();
-        System.out.println("Р’РІРµРґРёС‚Рµ РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ");
+        System.out.println("Введите второе число");
         int b = console.nextInt();
         int result;
         if (a%2!=0 && b%2!=0) {
-            System.out.println("РћР±Р° С‡РёСЃР»Р° РЅРµС‡РµС‚РЅС‹Рµ.");
+            System.out.println("Оба числа нечетные.");
         }else if (a%2!=0){
-            System.out.println("РїРµСЂРІРѕРµ С‡РёСЃР»Рѕ РЅРµС‡РµС‚РЅРѕРµ "+(result=a));
+            System.out.println("первое число нечетное "+(result=a));
         }else if (b%2!=0){
-            System.out.println("РІС‚РѕСЂРѕРµ С‡РёСЃР»Рѕ РЅРµС‡РµС‚РЅРѕРµ "+(result=b));
-        }else System.out.println("РќРµС‚ РЅРµС‡РµС‚РЅС‹С… С‡РёСЃР»Рµ.!!");
+            System.out.println("второе число нечетное "+(result=b));
+        }else System.out.println("Нет нечетных чисел.!!");
+    }
 
+    public static String evenNumbers (int number,int secondNumber){
+
+        if (number%2!=0 && secondNumber%2!=0) {
+            return "Оба числа нечетные.";
+        }else if (number%2!=0){
+            return "Первое число нечетное = " + number;
+        }else if (secondNumber%2!=0){
+            return "Второе число нечетное = " + secondNumber;
+        }else System.out.println("Нет нечетных чисел.!!");
+        return "Нет нечетных чисел.!!";
     }
 }

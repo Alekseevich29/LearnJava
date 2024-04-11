@@ -5,10 +5,13 @@ import java.util.Scanner;
 public class Exercise4_6 {
     public static void main(String[] agr) {
         Scanner console = new Scanner(System.in);
-        System.out.println("Р’РІРµРґРёС‚Рµ РіРѕРґ");
+        System.out.println("Введите год");
         int a = console.nextInt();
-        if (a%4==0){
-            System.out.println("Р“РѕРґ "+a+" Р’С‹СЃРѕРєРѕСЃРЅС‹Р№!");
-        }else System.out.println("Р“РѕРґ "+a+" РќРµ РІС‹СЃРѕРєРѕСЃРЅС‹Р№!" );
+
+    }
+    public static String years (int yesr ){
+        if (yesr%4==0){
+            return "Год "+yesr+" Высокосный!";
+        }else return "Год "+yesr+" Не высокосный!";
     }
 }

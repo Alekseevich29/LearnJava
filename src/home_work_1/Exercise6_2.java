@@ -2,15 +2,13 @@ package home_work_1;
 
 import java.util.Scanner;
 
-public class Exercise6_2 {
-    public static void main(String[] agr) {
-        Scanner console = new Scanner(System.in);
-        System.out.println("Р’РІРµРґРёС‚Рµ РІР°С€Рµ РёРјСЏ!");
-        String name = console.nextLine();
-        if (name.equals("Р’Р°СЃСЏ")) {
-            System.out.printf("РџСЂРёРІРµС‚ \nРЇ С‚РµР±СЏ С‚Р°Рє РґРѕР»РіРѕ Р¶РґР°Р»");
-        }else if(name.equals("РђРЅР°СЃС‚Р°СЃРёСЏ")) {System.out.printf("РЇ С‚РµР±СЏ С‚Р°Рє РґРѕР»РіРѕ Р¶РґР°Р»");
+public class Exercise6_2 implements ICommunicationPrinter{
 
-        }else { System.out.println("Р”РѕР±СЂС‹Р№ РґРµРЅСЊ, Р° РІС‹ РєС‚Рѕ?");}
+       public  String welcom (String name) {
+        if (name.equals("Вася")) {
+            return "Привет Я тебя так долго ждал";
+        }else if(name.equals("Анастасия")) {
+            return "Я тебя так долго ждал";
+        }else { return"Добрый день, а вы кто?";}
     }
 }
