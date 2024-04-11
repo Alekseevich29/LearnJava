@@ -3,28 +3,26 @@ package home_work_2.loops;
 import java.util.Scanner;
 
 public class Exercise1_1_1 {
-    public static void main(String[] agr) {
-        Scanner console = new Scanner(System.in);
-        System.out.println("–í–≤–µ–¥–∏—Ç–µ —á–∏—Å–ª–æ –¥–ª—è —É–º–Ω–æ–∂–µ–Ω–∏—è");
-        int a = console.nextInt();
-        if (a==12) {
-            System.out.println("–¢–∏–ø Int –ø–µ—Ä–µ–ø–æ–ª–Ω–µ–Ω");
-        }
-        if(a<0){
-            System.out.println("–í—ã –≤–≤–µ–ª–∏ –æ—Ç—Ä–∏—Ü–∞—Ç–µ–ª—å–Ω–æ–µ —á–∏—Å–ª–æ!");
-        }
+      public String numberMult (int number){
         int resault=1;
-        for(int i = 1; i <= a; i++) {
-             if (i!=a) {
-                 resault = resault * i;
-                 System.out.print(i + " * ");
-             }
-             if (i==a){
-                    System.out.print(" = "+resault);
-             }
+        String resultString = "";
+
+        if (number==12) {
+            return "“ËÔ Int ÔÂÂÔÓÎÌÂÌ";
         }
-
-
-
+        if(number<0){
+            return "¬˚ ‚‚ÂÎË ÓÚËˆ‡ÚÂÎ¸ÌÓÂ ˜ËÒÎÓ!";
+        }
+        for(int i = 1; i <= number; i++) {
+            if (i!=number) {
+                resault *= i;
+                resultString =resultString + i + " * ";
+            }
+            if (i==number){
+                resault *= i;
+                resultString =resultString + i +" = "+resault;
+            }
+        }
+        return resultString;
     }
 }

@@ -5,16 +5,8 @@ import java.util.Random;
 import java.util.Scanner;
 
 public class Exercise1_5 {
-        public static void main(String[] agr) {
-        Scanner console = new Scanner(System.in);
-        System.out.println("–í–≤–µ–¥–∏—Ç–µ –ú–∏–Ω–∏–º—É–º");
-        String entNumber = console.next();
-          System.out.println(reversOfNumbers(entNumber));
-
-
-        }
-    // –ó–∞–¥–∞—á–∞ 1.5.1
-    public static int largestNumber (String numberNatural){
+    // «‡‰‡˜‡ 1.5.1
+    public int largestNumber (String numberNatural){
       int max = 0;
         for (int i = 0; i < numberNatural.length(); i++) {
             int maxOfAll = Integer.parseInt(numberNatural.charAt(i)+"");
@@ -26,8 +18,8 @@ public class Exercise1_5 {
         }
         return max;
      }
-    // –ó–∞–¥–∞—á–∞ 1.5.2
-    public static int randomNumberPersent (){
+    // «‡‰‡˜‡ 1.5.2
+    public  int randomNumberPersent (){
         final Random random = new Random();
         int randomNumber = 0;
         int counter = 0;
@@ -39,8 +31,8 @@ public class Exercise1_5 {
         }
         return counter;
     }
-    //–ó–∞–¥–∞—á–∞ 1.5.3
-    public static void evenAndOdd (String numberReader){
+    //«‡‰‡˜‡ 1.5.3
+    public  void evenAndOdd (String numberReader){
         int counterOne = 0;
         int counterTwo = 0;
         String numberOne = "";
@@ -53,34 +45,38 @@ public class Exercise1_5 {
                 numberTwo=numberTwo + numberReader.charAt(i)+" ";
             }
         }
-        System.out.println("–ß–µ—Ç–Ω—ã–µ —á–∏—Å–ª–∞ = " + numberOne+
-                "\n–ß–µ—Ç–Ω—ã—Ö —á–∏—Å–µ–ª = "+ counterOne +
-                "\n–ù–µ—á–µ—Ç–Ω—ã–µ —á–∏—Å–ª–∞ = "+ numberTwo+
-                "\n–ù–µ—á–µ—Ç–Ω—ã—Ö —á–∏—Å–µ–ª = "+ counterTwo);
+        System.out.println("◊ÂÚÌ˚Â ˜ËÒÎ‡ = " + numberOne+
+                "\n◊ÂÚÌ˚ı ˜ËÒÂÎ = "+ counterOne +
+                "\nÕÂ˜ÂÚÌ˚Â ˜ËÒÎ‡ = "+ numberTwo+
+                "\nÕÂ˜ÂÚÌ˚ı ˜ËÒÂÎ = "+ counterTwo);
     }
-    //–ó–∞–¥–∞—á–∞ 1.5.4
-    public static void eibonachiNumbers (int numberNeed){
+    //«‡‰‡˜‡ 1.5.4
+    public  String fibonachiNumbers (int numberNeed){
+        String result ="";
         int number1 = 1;
         int number2 = 1;
         int number3;
-        System.out.print( number1 + " " +number2 + " ");
+        result = number1 + " " +number2 + " ";
         for (int i = 2; i <= numberNeed; i++) {
             number3 = number1 + number2;
-            System.out.print(number3 + " ");
+            result = result + number3 + " ";
             number1 = number2;
             number2 = number3;
         }
+        return result;
     }
-    //–ó–∞–¥–∞—á–∞ 1.5.5
-    public static void numbersSteps (int entNumberMin,int entNumberMax,int entNumberStep){
+    //«‡‰‡˜‡ 1.5.5
+    public String numbersSteps (int entNumberMin,int entNumberMax,int entNumberStep){
+        String result = "";
         for (int i = entNumberMin; i <= entNumberMax ; i++) {
             if (i % entNumberStep == 0) {
-                System.out.print(i + " ");
+                result += i + " ";
             }
         }
+        return result;
     }
-    //–ó–∞–¥–∞—á–∞ 1.5.6
-    public static int reversOfNumbers (String entNumber){
+    //«‡‰‡˜‡ 1.5.6
+    public  int reversOfNumbers (String entNumber){
             String result = "";
         for (int i = 0; i < entNumber.length(); i++) {
             result= entNumber.charAt(i) + result;

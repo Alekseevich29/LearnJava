@@ -1,8 +1,12 @@
 package home_work_2.utils;
 
+import org.junit.jupiter.api.Test;
+
+import java.util.Arrays;
+
 public class SortsUtils {
 
-    public static void sort(int[] arr){
+    public  String sort(int[] arr){
         for (int i = 0; i < arr.length - 1; i++) {
             for (int j = arr.length - 1; j > i; j--) {
                 if (arr[j-1]>arr[j]) {
@@ -12,9 +16,10 @@ public class SortsUtils {
                 }
             }
         }
+        return Arrays.toString(arr);
     }
 
-    public static void shake(int[] arr){
+    public String shake(int[] arr){
         int left = 0;
         int right = arr.length-1;
         int flag = 1;
@@ -39,5 +44,6 @@ public class SortsUtils {
             }
             left++;
         }
+        return Arrays.toString(arr);
     }
 }

@@ -8,17 +8,17 @@ import java.util.Scanner;
 public class Exercise2_4 {
     public void main(String[] args) {
        //Exercise2_4 a = new Exercise2_4();
-       sumChetArray();
+       //sumChetArray();
         Scanner console = new Scanner(System.in);
-        System.out.println("Р’РІРµРґРёС‚Рµ РЅРёР¶РЅСЋСЋ С†РёС„СЂСѓ РґРёР°РїРѕР·РѕРЅР°");
+        System.out.println("Введите нижнюю цифру диапозона");
         int entNumberOne = console.nextInt();
-        System.out.println("Р’РІРµРґРёС‚Рµ РІРµСЂРЅС…СЋСЋ С†РёС„СЂСѓ РґРёР°РїРѕР·РѕРЅР°");
+        System.out.println("Введите вернхюю цифру диапозона");
         int entNumberTwo = console.nextInt();
     }
     ArraysUtils arrayRandom = new ArraysUtils();
     int [] arrayRnd = arrayRandom.arrayRandom(50,100);
 //2.4.1
-    public  int sumChetArray (){
+    public  int sumChetArray (int [] arrayRnd){
         int summ = 0;
         for (int i = 0; i < arrayRnd.length; i++) {
             if (arrayRnd[i]>=0 && arrayRnd[i]%2==0){
@@ -28,9 +28,8 @@ public class Exercise2_4 {
        return summ;
     }
 //2.4.2
-    public int maxChetArray (){
+    public int maxChetArray (int [] arrayRnd){
         int max = 0;
-        int [] chetArray= new int[50];
         for (int i = 0; i < arrayRnd.length; i++) {
             if (i%2==0) {
                 if (arrayRnd[i]>max){
@@ -41,26 +40,29 @@ public class Exercise2_4 {
         return max;
     }
 //2.4.3
-    public void minAverage (){
+    public String minAverage (int [] arrayRnd){
         int sum = 0;
         int average = 1;
+        String result = "";
         for (int i = 0; i < arrayRnd.length; i++) {
-            sum = sum+arrayRnd[i];
+            sum += arrayRnd[i];
             if (i == arrayRnd.length-1){
                 average = sum/arrayRnd.length;
             }
         }
         for (int i = 0; i < arrayRnd.length; i++) {
             if(average>arrayRnd[i]){
-                System.out.print(arrayRnd[i] + " ");
+                result += arrayRnd[i] + " ";
             }
         }
+        return result;
     }
 //2.4.4
-    public void twoMinInArray (){
+    public String  twoMinInArray (int [] arrayRnd){
         int firstNumberMin = arrayRnd[0];
         int secondNumber = arrayRnd[0];
         int indexFirstNumberMin = 0;
+        String result = "";
         for (int i = 0; i < arrayRnd.length; i++) {
             if (firstNumberMin > arrayRnd[i]) {
                 indexFirstNumberMin=i;
@@ -76,10 +78,10 @@ public class Exercise2_4 {
                 }
             }
         }
-        System.out.println("\nРњРёРЅРёРјР°Р»СЊРЅС‹Рµ С‡РёСЃР»Р° = "+ firstNumberMin +" "+ secondNumber);
+        return result + "Минимальные числа = "+ firstNumberMin +" "+ secondNumber;
     }
 //2.4.5
-    public String compressArray (int entNumberOne,int entNumberTwo){
+    public String compressArray (int entNumberOne,int entNumberTwo,int [] arrayRnd){
 
         int number = 0;
 
@@ -96,7 +98,7 @@ public class Exercise2_4 {
         return Arrays.toString(arrayRnd);
     }
 //2.4.6
-    public int summAllNumber (){
+    public int summAllNumber (int [] arrayRnd){
         int summAll =0;
         for (int i = 0; i < arrayRnd.length; i++) {
             while (arrayRnd[i]>0){
