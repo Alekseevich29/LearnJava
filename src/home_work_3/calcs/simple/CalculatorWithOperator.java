@@ -15,6 +15,7 @@ public class CalculatorWithOperator implements ICalculator {
     public double result;
     public double average;
     public double plus (double firstNumber, double secondNumber){
+    //    Math.addExact(firstNumber,secondNumber)
         return firstNumber+secondNumber;
     }
 

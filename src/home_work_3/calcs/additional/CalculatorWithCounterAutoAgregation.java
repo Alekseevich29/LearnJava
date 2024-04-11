@@ -1,6 +1,7 @@
 package home_work_3.calcs.additional;
 
 import home_work_3.calcs.simple.CalculatorWithMathCopy;
+import home_work_4.DataContainer;
 
 /***
  * 8. Создать класс CalculatorWithCounterAutoAgregation.
