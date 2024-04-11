@@ -24,7 +24,7 @@ public class DataContainer<T> {
                 if (tmp[i] == null) {
                     tmp[i] = item;
                     data = tmp;
-                    return numberPosition++;
+                    return numberPosition+=i;
                 }
             }
         } while (data.length - 1 >= 0);
@@ -75,7 +75,7 @@ public class DataContainer<T> {
       public void sort(Comparator <T> comparator){
           for (int i = 0; i < data.length - 1; i++) {
               for (int j = 0; j < data.length - i - 1; j++) {
-                  if (comparator.compare(data[j], data[j + 1]) >= 0) {
+                  if (comparator.compare(data[j], data[j + 1]) > 0) {
                       T temp = data[j];
                       data[j] = data[j + 1];
                       data[j + 1] = temp;
