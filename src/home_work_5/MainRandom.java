@@ -6,7 +6,7 @@ import home_work_5.GeneratorsRandom.RandomNameGenerator;
 
 import java.util.*;
 
-public class MainRandom {
+public class MainRandom <T> {
     public static void main(String[] args) {
 
         LinkedList<Person> personLinkedList =  new LinkedList<>();
@@ -18,7 +18,9 @@ public class MainRandom {
         AllRealizationMetods.allIteratorCollection(personLinkedList);
         AllRealizationMetods.allIteratorAnyVariantCollection(personLinkedList);
         // Сортировка
+        AllRealizationMetods.sortMyList(new PersonPasswordWithNickComparison(),personLinkedList);
         personLinkedList.sort(new PersonPasswordWithNickComparison());
+
 
         AllRealizationMetods.allDeleteIteratorCollection(personLinkedList);
 
@@ -26,6 +28,7 @@ public class MainRandom {
         AllRealizationMetods.allIteratorCollection(personArrayList);
         AllRealizationMetods.allIteratorAnyVariantCollection(personArrayList);
         // Сортировка
+        AllRealizationMetods.sortMyList(new PersonPasswordWithNickComparison(),personArrayList);
         personArrayList.sort(new PersonPasswordWithNickComparison());
 
         AllRealizationMetods.allDeleteIteratorCollection(personArrayList);
@@ -50,4 +53,6 @@ public class MainRandom {
         AllRealizationMetods.allDeleteIteratorCollection(personTreeSet);
 
     }
+
+
 }
