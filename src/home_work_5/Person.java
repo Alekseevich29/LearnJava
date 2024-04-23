@@ -30,12 +30,12 @@ public class Person {
         if (password.length() >= 5 && password.length() <= 10 ){
             this.password = password;
         }else {
-            throw new IllegalArgumentException ("Ïàðîëü äîëæåí áûòü îò 5 äî 10 ñèìâîëîâ.");
+            throw new IllegalArgumentException ("ÐŸÐ°Ñ€Ð¾Ð»ÑŒ Ð´Ð¾Ð»Ð¶ÐµÐ½ Ð±Ñ‹Ñ‚ÑŒ Ð¾Ñ‚ 5 Ð´Ð¾ 10 ÑÐ¸Ð¼Ð²Ð¾Ð»Ð¾Ð².");
         }
     }
 
     public String toString() {
-        return  "Person { Èìÿ = "+ name +" Ïñåâäîíèì = "+ nick + " Ïàðîëü = "+ password +" }";
+        return  "Person { Ð˜Ð¼Ñ = "+ name +" ÐŸÑÐµÐ²Ð´Ð¾Ð½Ð¸Ð¼ = "+ nick + " ÐŸÐ°Ñ€Ð¾Ð»ÑŒ = "+ password +" }";
     }
 
 }

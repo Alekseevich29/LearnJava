@@ -10,17 +10,17 @@ import java.util.List;
 
 public class AllRealizationMetods <T> {
 
-    //Наполнение коллекций.
+    //РќР°РїРѕР»РЅРµРЅРёРµ РєРѕР»Р»РµРєС†РёР№.
     public static void  allAddCollection (Collection <Person>collection){
         long start = System.currentTimeMillis();
         int randomNumberNeed = 1_000_000;
         for (int i = 0; i < randomNumberNeed; i++) {
-            collection.add(new Person(new RandomNickGenerator().generatorRandomRusNick(10),"привети123", RandomNameGenerator.geterateRandomRealName()));
+            collection.add(new Person(new RandomNickGenerator().generatorRandomRusNick(10),"РїСЂРёРІРµС‚Рё123", RandomNameGenerator.geterateRandomRealName()));
         }
         long stop = System.currentTimeMillis();
-        System.out.println("Операция добавление "+collection.getClass().getName()+" = "+ (stop-start) + " мс");
+        System.out.println("РћРїРµСЂР°С†РёСЏ РґРѕР±Р°РІР»РµРЅРёРµ "+collection.getClass().getName()+" = "+ (stop-start) + " РјСЃ");
     }
-    //Удаление элементов коллекций.
+    //РЈРґР°Р»РµРЅРёРµ СЌР»РµРјРµРЅС‚РѕРІ РєРѕР»Р»РµРєС†РёР№.
     public static void  allDeleteIteratorCollection (Collection <Person> collection){
         long start = System.currentTimeMillis();
         Iterator<Person> iterator = collection.iterator();
@@ -29,17 +29,17 @@ public class AllRealizationMetods <T> {
             iterator.remove();
         }
         long stop = System.currentTimeMillis();
-        System.out.println("Операция Удаления Iterator  = "+collection.getClass().getName()+" = "+ (stop-start) + " мс");
+        System.out.println("РћРїРµСЂР°С†РёСЏ РЈРґР°Р»РµРЅРёСЏ Iterator  = "+collection.getClass().getName()+" = "+ (stop-start) + " РјСЃ");
     }
-        // Удаление через removeAll.
+        // РЈРґР°Р»РµРЅРёРµ С‡РµСЂРµР· removeAll.
    /* public static void  allDeleteForCollection (Collection collection){
         long start = System.currentTimeMillis();
         Collection <Person> people = collection;
         collection.removeAll(people);
         long stop = System.currentTimeMillis();
-        System.out.println("Операция Удаления removeAll  = "+collection.getClass().getName()+" = "+ (stop-start) + " мс");
+        System.out.println("РћРїРµСЂР°С†РёСЏ РЈРґР°Р»РµРЅРёСЏ removeAll  = "+collection.getClass().getName()+" = "+ (stop-start) + " РјСЃ");
     }*/
-    // Итерирование через итератор
+    // РС‚РµСЂРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· РёС‚РµСЂР°С‚РѕСЂ
     public static void  allIteratorCollection (Collection <Person> collection){
         Iterator<Person> iterator = collection.iterator();
         long start = System.currentTimeMillis();
@@ -47,9 +47,9 @@ public class AllRealizationMetods <T> {
             iterator.next();
         }
         long stop = System.currentTimeMillis();
-        System.out.println("Итерирование занимает  = "+collection.getClass().getName()+" = "+ (stop-start) + " мс");
+        System.out.println("РС‚РµСЂРёСЂРѕРІР°РЅРёРµ Р·Р°РЅРёРјР°РµС‚  = "+collection.getClass().getName()+" = "+ (stop-start) + " РјСЃ");
     }
-    // Итерирование через For.
+    // РС‚РµСЂРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· For.
     public static void  allIteratorAnyVariantCollection (Collection <Person> collection){
         int count = 0;
         long start = System.currentTimeMillis();
@@ -57,11 +57,11 @@ public class AllRealizationMetods <T> {
             count++;
         }
         long stop = System.currentTimeMillis();
-        System.out.println("Итерирование через For занимает = "+collection.getClass().getName()+" = "+ (stop-start) + " мс");
+        System.out.println("РС‚РµСЂРёСЂРѕРІР°РЅРёРµ С‡РµСЂРµР· For Р·Р°РЅРёРјР°РµС‚ = "+collection.getClass().getName()+" = "+ (stop-start) + " РјСЃ");
     }
 
-    // моя сортировка 6.3.2.* Сортируем собственным методом сортировки
-    // только для List.
+    // РјРѕСЏ СЃРѕСЂС‚РёСЂРѕРІРєР° 6.3.2.* РЎРѕСЂС‚РёСЂСѓРµРј СЃРѕР±СЃС‚РІРµРЅРЅС‹Рј РјРµС‚РѕРґРѕРј СЃРѕСЂС‚РёСЂРѕРІРєРё
+    // С‚РѕР»СЊРєРѕ РґР»СЏ List.
     public static void sortMyList (Comparator<Person> comparator, List<Person> collection) {
         for (int i = 0; i < collection.size() - 1; i++) {
             for (int j = 0; j < collection.size() - i - 1; j++) {

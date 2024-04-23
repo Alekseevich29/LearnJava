@@ -10,7 +10,7 @@ public class Animal {
     public void setAge(int age) {
         if (age >1 && age<15){
         this.age = age;
-        }else throw new IllegalArgumentException ("Âîçğàñò äîëæåí áûòü îò 1 äî 15 ëåò.");
+        }else throw new IllegalArgumentException ("Ğ’Ğ¾Ğ·Ñ€Ğ°ÑÑ‚ Ğ´Ğ¾Ğ»Ğ¶ĞµĞ½ Ğ±Ñ‹Ñ‚ÑŒ Ğ¾Ñ‚ 1 Ğ´Ğ¾ 15 Ğ»ĞµÑ‚.");
     }
 
     public int getAge() {

@@ -13,11 +13,11 @@ public class MainRandom <T> {
         ArrayList<Person> personArrayList = new ArrayList<>();
         HashSet<Person> personHashSet = new HashSet<>();
         TreeSet <Person> personTreeSet = new TreeSet<>(new PersonPasswordWithNickComparison());
-        ///наполнение и удаление с выводов времени
+        ///РЅР°РїРѕР»РЅРµРЅРёРµ Рё СѓРґР°Р»РµРЅРёРµ СЃ РІС‹РІРѕРґРѕРІ РІСЂРµРјРµРЅРё
         AllRealizationMetods.allAddCollection(personLinkedList);
         AllRealizationMetods.allIteratorCollection(personLinkedList);
         AllRealizationMetods.allIteratorAnyVariantCollection(personLinkedList);
-        // Сортировка
+        // РЎРѕСЂС‚РёСЂРѕРІРєР°
         AllRealizationMetods.sortMyList(new PersonPasswordWithNickComparison(),personLinkedList);
         personLinkedList.sort(new PersonPasswordWithNickComparison());
 
@@ -27,7 +27,7 @@ public class MainRandom <T> {
         AllRealizationMetods.allAddCollection(personArrayList);
         AllRealizationMetods.allIteratorCollection(personArrayList);
         AllRealizationMetods.allIteratorAnyVariantCollection(personArrayList);
-        // Сортировка
+        // РЎРѕСЂС‚РёСЂРѕРІРєР°
         AllRealizationMetods.sortMyList(new PersonPasswordWithNickComparison(),personArrayList);
         personArrayList.sort(new PersonPasswordWithNickComparison());
 
@@ -36,7 +36,7 @@ public class MainRandom <T> {
         AllRealizationMetods.allAddCollection(personHashSet);
         AllRealizationMetods.allIteratorCollection(personHashSet);
         AllRealizationMetods.allIteratorAnyVariantCollection(personHashSet);
-        // Сортировка
+        // РЎРѕСЂС‚РёСЂРѕРІРєР°
         List <Person> sortHashSet = new ArrayList<>(personHashSet);
         sortHashSet.sort(new PersonPasswordWithNickComparison());
 
@@ -46,7 +46,7 @@ public class MainRandom <T> {
         AllRealizationMetods.allAddCollection(personTreeSet);
         AllRealizationMetods.allIteratorCollection(personTreeSet);
         AllRealizationMetods.allIteratorAnyVariantCollection(personTreeSet);
-        // Сортировка
+        // РЎРѕСЂС‚РёСЂРѕРІРєР°
         List <Person> clonTreeSet = new ArrayList<>(personTreeSet);
         clonTreeSet.sort(new PersonPasswordWithNickComparison());
 
