@@ -96,7 +96,7 @@ public class ChoiceFilesIn100Books {
 
     public static void writeResult (String fileName, String word, int count) throws IOException{
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(RESULT_FILE, true))){
-            writer.write(fileName + " : "+word+" : "+count + "n");
+            writer.write(fileName + " : "+word+" : "+count + "\n ");
         }
     }
 
