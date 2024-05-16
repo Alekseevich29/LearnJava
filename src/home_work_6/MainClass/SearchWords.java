@@ -1,20 +1,20 @@
 package home_work_6.MainClass;
 
 import java.io.BufferedReader;
+import java.io.FileNotFoundException;
 import java.io.FileReader;
 import java.io.IOException;
 import java.util.*;
 
 public class SearchWords {
-
-    public static void main(String[] args) {
-        String nameFiles = "Война и мир_книга.txt";
-        System.out.println(SearchWords.readFilesWords(nameFiles));
-
+    // 2,2
+    public static String topNWords (String nameFiles){
         HashMap<String,Integer> resultWords = new HashMap<>();
+        List <String> resultList = new ArrayList<>();
 
-      try (BufferedReader myFile = new BufferedReader(new FileReader(nameFiles))){
+        try (BufferedReader myFile = new BufferedReader(new FileReader(nameFiles))){
             String allStr;
+
             while ((allStr = myFile.readLine())!=null){
                 String [] str = allStr.split("\\s+");
                 for (String word : str) {
@@ -27,16 +27,22 @@ public class SearchWords {
 
             List<Map.Entry<String,Integer>> sortMap = new ArrayList<>(resultWords.entrySet());
             sortMap.sort((first,second) -> second.getValue().compareTo(first.getValue()));
+
             for (int j = 0; j < Math.min(10,sortMap.size()); j++) {
                 Map.Entry<String, Integer> entry = sortMap.get(j);
-                System.out.println(entry.getKey() + " - " + entry.getValue() + " раз");
+                resultList.add(entry.getKey() + " - " + entry.getValue() + " раз");
             }
         }
-        catch(IOException exp){
-            System.out.println(exp.getMessage());
+        catch (FileNotFoundException e){
+            System.out.println("Файл не найден");
         }
+        catch(IOException e){
+            System.out.println(e.getMessage());
+        }
+        return resultList.toString();
     }
 
+    // 2,1
     public static String readFilesWords (String nameFile){
         HashSet<String> allWords = new HashSet<>();
         StringBuilder stringBuilder = new StringBuilder();
@@ -54,9 +60,7 @@ public class SearchWords {
                    }
                    allWords.add(stringBuilder.toString());
                }
-
            }
-
         }
         catch(IOException exp){
             System.out.println(exp.getMessage());

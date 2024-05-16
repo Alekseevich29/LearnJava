@@ -1,5 +1,5 @@
 SearchWords  - 2.1  метод readFilesWords 
-		2.2 - в мейне
+		2.2 - в Методе topNWords
 ISearchEngine - интерфейс из задания 3.
 EasySearch - 4.1
 RegExSearch  - 4.2

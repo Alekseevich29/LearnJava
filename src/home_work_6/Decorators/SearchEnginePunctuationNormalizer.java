@@ -11,7 +11,6 @@ public class SearchEnginePunctuationNormalizer implements ISearchEngine {
 
     @Override
     public long search(String text, String word) {
-
         text = text.replaceAll("[^a-zA-Zа-яА-Я\\s]", "");
         text = text.replaceAll("\\s+", " ").trim();
         return  iSearchEngine.search(text,word);

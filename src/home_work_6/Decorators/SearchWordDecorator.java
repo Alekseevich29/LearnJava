@@ -1,11 +1,6 @@
 package home_work_6.Decorators;
 
 import home_work_6.ISearchEngine;
-import home_work_6.RegExSearch;
-
-import java.util.Locale;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
 
 public class SearchWordDecorator implements ISearchEngine {
     protected final ISearchEngine searchWord ;
