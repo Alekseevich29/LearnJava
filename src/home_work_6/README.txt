@@ -9,5 +9,7 @@ WordSearchEngine - 5.1
 WordSearchEngineWithRegex - 5.2
 Папка Тесты - 6 и 7 тест
 ChoiceFilesIn100Books - 7.
-
+ChoiceFilesIn100BooksWithThreds - корявый код для многопоточности.
+SearchFJP - реализация ForkJoinPool
+Прошу прощения что задание сделал не так как указано, с многопоточностью каша в голове все еще(
 

@@ -37,7 +37,7 @@ public class ChoiceWordForBooksUtils {
         return count;
     }
 
-    public static void writeResult (String fileName, String word, int count) throws IOException{
+    public static void writeResult (String fileName, String word, long count) throws IOException{
         try (BufferedWriter writer = new BufferedWriter(new FileWriter(RESULT_FILE, true))){
             writer.write(fileName + " : "+word+" : "+count + "\n ");
         }
